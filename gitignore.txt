@@ -1,2 +1,4 @@
-bin/
-obj/
+   webapi_19/bin/
+   webapi_19/obj/
+   webapp_19/bin/
+   webapp_19/obj/
