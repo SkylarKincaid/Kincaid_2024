@@ -11,8 +11,6 @@ C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\webapp_19.AssemblyInfo.cs
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\webapp_19.csproj.CoreCompileInputs.cache
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\webapp_19.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\webapp_19.RazorAssemblyInfo.cache
-C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\webapp_19.RazorAssemblyInfo.cs
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\staticwebassets\msbuild.webapp_19.Microsoft.AspNetCore.StaticWebAssets.props
@@ -20,11 +18,10 @@ C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.webapp_19.props
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.webapp_19.props
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\scopedcss\bundle\webapp_19.styles.css
-C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\scopedcss\projectbundle\webapp_19.bundle.scp.css
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\webapp_19.dll
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\refint\webapp_19.dll
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\webapp_19.pdb
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\webapp_19.genruntimeconfig.cache
 C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\ref\webapp_19.dll
+C:\Users\andre\OneDrive\Documents\Class Project\week_19\webapp_19\obj\Debug\net8.0\webapp_19.sourcelink.json
