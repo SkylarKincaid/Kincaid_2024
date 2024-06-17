@@ -1,18 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Melinda Murdock</title>
+    <style>
+        /* Basic styles to mimic the layout */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            /* Adjust as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0;
+        }
+
+        .content {
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content img {
+            max-width: 300px;
+            /* Adjust size as needed */
+            margin-right: 20px;
+            /* Optional: Adjust spacing */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
-    <button type="button" id="button-01" class="btn btn-outline-secondary">Say Hello</button>
-    <script src="index.js"></script>
+    <header>
+        <h1>Melinda Murdock, MS, LMFT</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about" class="content">
+        <img src="https://photos.psychologytoday.com/348382ac-097a-4b21-b884-0fa8d78bf920/2/320x400.jpeg"
+            alt="Melinda Murdock Photo">
+        <div>
+            <h2>About Melinda Murdock</h2>
+            <p>Melinda Murdock specializes in supporting individuals, couples, and families facing unique challenges and
+                stressors, particularly within Black communities and marginalized identities. Her extensive training and
+                research in social justice issues and relationship health enrich her therapeutic approach, offering a
+                distinctive perspective.
 
+                Melinda is committed to equipping clients with new coping mechanisms, reshaping negative
+                behavioral patterns, and transforming relationship dynamics from conflictual cycles to healthier, more
+                empowering connections. Her goal is to empower clients to achieve greater harmony within themselves and
+                in their relationships.</p>
+        </div>
+    </section>
+    <section id="home" class="hero">
+        <div>
+            <h1>Welcome to Melinda Murdock's Website</h1>
+            <p>Subheadline or call to action</p>
+        </div>
+        <footer>
+            <p>&copy; 2024 Melinda Murdock. All rights reserved.</p>
+        </footer>
 </body>
 
 </html>

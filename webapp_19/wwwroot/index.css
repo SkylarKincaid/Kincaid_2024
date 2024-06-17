@@ -2,3 +2,8 @@ body {
     background-color: lavender;
     padding: 40px;
 }
+
+.content p {
+    margin-bottom: 1.5em;
+    /* Adjust spacing as needed */
+}
