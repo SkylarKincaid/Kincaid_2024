@@ -15,8 +15,19 @@ if (!app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();
 app.UseDefaultFiles();
+//jack - add rewrite - begin
+app.Use(async (context, next) =>
+{
+    var url = context.Request.Path.Value ?? "";
+    url = url.ToLower();
+    if (url.ToLower().EndsWith("/home") || url.ToLower().EndsWith("/about") || url.ToLower().EndsWith("/blog") || url.ToLower().EndsWith("/contact"))
+    {
+        context.Request.Path = "/index.html";
+    }
+    await next();
+});
+//jack - add rewrite - end
 app.UseStaticFiles();
-
 app.UseRouting();
 
 app.UseAuthorization();
