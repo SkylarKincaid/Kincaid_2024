@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Generic - Phantom by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="phantom.html" class="logo">
+					<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+				</a>
+
+				<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+
+			</div>
+			<!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script> -->
+			<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
+
+			<script>
+
+
+				document.addEventListener('DOMContentLoaded', function () {
+					var calendarEl = document.getElementById('calendar');
+
+					var calendar = new FullCalendar.Calendar(calendarEl, {
+						headerToolbar: {
+							left: 'prev,next today',
+							center: 'title',
+							right: 'dayGridMonth,timeGridWeek,timeGridDay'
+						},
+						initialDate: '2023-01-12',
+						navLinks: true, // can click day/week names to navigate views
+						selectable: true,
+						selectMirror: true,
+						select: function (arg) {
+							var title = prompt('Event Title:');
+							if (title) {
+								calendar.addEvent({
+									title: title,
+									start: arg.start,
+									end: arg.end,
+									allDay: arg.allDay
+								})
+							}
+							calendar.unselect()
+						},
+						eventClick: function (arg) {
+							if (confirm('Are you sure you want to delete this event?')) {
+								arg.event.remove()
+							}
+						},
+						editable: true,
+						dayMaxEvents: true, // allow "more" link when too many events
+						events: [
+							{
+								title: 'All Day Event',
+								start: '2023-01-01'
+							},
+							{
+								title: 'Long Event',
+								start: '2023-01-07',
+								end: '2023-01-10'
+							},
+							{
+								groupId: 999,
+								title: 'Repeating Event',
+								start: '2023-01-09T16:00:00'
+							},
+							{
+								groupId: 999,
+								title: 'Repeating Event',
+								start: '2023-01-16T16:00:00'
+							},
+							{
+								title: 'Conference',
+								start: '2023-01-11',
+								end: '2023-01-13'
+							},
+							{
+								title: 'Meeting',
+								start: '2023-01-12T10:30:00',
+								end: '2023-01-12T12:30:00'
+							},
+							{
+								title: 'Lunch',
+								start: '2023-01-12T12:00:00'
+							},
+							{
+								title: 'Meeting',
+								start: '2023-01-12T14:30:00'
+							},
+							{
+								title: 'Happy Hour',
+								start: '2023-01-12T17:30:00'
+							},
+							{
+								title: 'Dinner',
+								start: '2023-01-12T20:00:00'
+							},
+							{
+								title: 'Birthday Party',
+								start: '2023-01-13T07:00:00'
+							},
+							{
+								title: 'Click for Google',
+								url: 'http://google.com/',
+								start: '2023-01-28'
+							}
+						]
+					});
+
+					calendar.render();
+				});
+
+
+			</script>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="phantom.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="blogs.html">Blogs</a></li>
+				<li><a href="schedule.html">Schedule</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<h1>Schedule Page</h1>
+				<div id='calendar'></div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<section>
+					<h2>Get in touch</h2>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<input type="text" name="name" id="name" placeholder="Name" />
+							</div>
+							<div class="field half">
+								<input type="email" name="email" id="email" placeholder="Email" />
+							</div>
+							<div class="field">
+								<textarea name="message" id="message" placeholder="Message"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send" class="primary" /></li>
+						</ul>
+					</form>
+				</section>
+				<section>
+					<h2>Follow</h2>
+					<ul class="icons">
+						<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a>
+						</li>
+						<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon brands style2 fa-500px"><span class="label">500px</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</section>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

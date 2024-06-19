@@ -22,7 +22,7 @@ app.Use(async (context, next) =>
     url = url.ToLower();
     if (url.ToLower().EndsWith("/home") || url.ToLower().EndsWith("/about") || url.ToLower().EndsWith("/blog") || url.ToLower().EndsWith("/contact"))
     {
-        context.Request.Path = "/index.html";
+        context.Request.Path = "/phantom.html";
     }
     await next();
 });

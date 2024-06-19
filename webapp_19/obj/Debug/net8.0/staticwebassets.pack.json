@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\index.js"
     },
     {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\phantom.html",
+      "PackagePath": "staticwebassets\\phantom.html"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.webapp_19.props",
       "PackagePath": "build\\webapp_19.props"
     },

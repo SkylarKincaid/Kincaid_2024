@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HOLVru3wmNLeVo43vqH3HDkrm5pS9fS1aZfs2esY4oE=",
+  "Hash": "eZOmm9CGXcyFjcnsHiKrQ1MIhSsYuh6JeuZrey7prw8=",
   "Source": "webapp_19",
   "BasePath": "_content/webapp_19",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.js"
+    },
+    {
+      "Identity": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\phantom.html",
+      "SourceId": "webapp_19",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\",
+      "BasePath": "_content/webapp_19",
+      "RelativePath": "phantom.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\phantom.html"
     }
   ]
 }
