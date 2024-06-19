@@ -1,8 +1,288 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\about.html",
+      "PackagePath": "staticwebassets\\about.html"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\css\\fontawesome-all.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\fontawesome-all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\assets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\css\\noscript.css",
+      "PackagePath": "staticwebassets\\assets\\css\\noscript.css"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\js\\breakpoints.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\breakpoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\js\\browser.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\browser.min.js"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\js\\util.js",
+      "PackagePath": "staticwebassets\\assets\\js\\util.js"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\base\\_page.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\base\\_page.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\base\\_reset.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\base\\_reset.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\base\\_typography.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\base\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_actions.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_actions.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_box.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_box.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_button.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_button.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_form.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_form.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_icon.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_icon.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_icons.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_image.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_image.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_list.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_list.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_row.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_row.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_section.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_section.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_table.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_table.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\components\\_tiles.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\components\\_tiles.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\layout\\_footer.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\layout\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\layout\\_header.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\layout\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\layout\\_main.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\layout\\_main.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\layout\\_menu.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\layout\\_menu.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\layout\\_wrapper.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\layout\\_wrapper.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\libs\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\libs\\_breakpoints.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\libs\\_functions.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\libs\\_functions.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\libs\\_html-grid.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\libs\\_html-grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\libs\\_mixins.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\libs\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\libs\\_vars.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\libs\\_vars.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\libs\\_vendor.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\libs\\_vendor.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\main.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\main.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\sass\\noscript.scss",
+      "PackagePath": "staticwebassets\\assets\\sass\\noscript.scss"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\assets\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\blogs.html",
+      "PackagePath": "staticwebassets\\blogs.html"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\elements.html",
+      "PackagePath": "staticwebassets\\elements.html"
+    },
+    {
       "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\images\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic01.jpg",
+      "PackagePath": "staticwebassets\\images\\pic01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic02.jpg",
+      "PackagePath": "staticwebassets\\images\\pic02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic03.jpg",
+      "PackagePath": "staticwebassets\\images\\pic03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic04.jpg",
+      "PackagePath": "staticwebassets\\images\\pic04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic05.jpg",
+      "PackagePath": "staticwebassets\\images\\pic05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic06.jpg",
+      "PackagePath": "staticwebassets\\images\\pic06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic07.jpg",
+      "PackagePath": "staticwebassets\\images\\pic07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic08.jpg",
+      "PackagePath": "staticwebassets\\images\\pic08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic09.jpg",
+      "PackagePath": "staticwebassets\\images\\pic09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic10.jpg",
+      "PackagePath": "staticwebassets\\images\\pic10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic11.jpg",
+      "PackagePath": "staticwebassets\\images\\pic11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic12.jpg",
+      "PackagePath": "staticwebassets\\images\\pic12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic13.jpg",
+      "PackagePath": "staticwebassets\\images\\pic13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic14.jpg",
+      "PackagePath": "staticwebassets\\images\\pic14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\images\\pic15.jpg",
+      "PackagePath": "staticwebassets\\images\\pic15.jpg"
     },
     {
       "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\index.css",
@@ -19,6 +299,10 @@
     {
       "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\phantom.html",
       "PackagePath": "staticwebassets\\phantom.html"
+    },
+    {
+      "Id": "C:\\Users\\andre\\OneDrive\\Documents\\Class Project\\week_19\\webapp_19\\wwwroot\\schedule.html",
+      "PackagePath": "staticwebassets\\schedule.html"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.webapp_19.props",
