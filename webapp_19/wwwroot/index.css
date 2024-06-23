@@ -190,3 +190,28 @@
             -webkit-line-clamp: 3;
             overflow: hidden;
         }
+
+        button[title="Previous week"],
+        button[title="Next week"],
+        button[title="This week"],
+        button[title="Previous day"],
+        button[title="Next day"],
+        button[title="Today"],
+        button[title="Previous month"],
+        button[title="Next month"],
+        button[title="month view"],
+        button[title="week view"],
+        button[title="day view"],
+        button[title="This month"] {
+            background-color: transparent !important;
+            border: none !important;
+        }
+
+        div.fc-scroller.fc-scroller-liquid-absolute {
+            overflow: visible !important;
+        }
+
+        :root {
+            --fc-event-bg-color: #f2849e;
+            --fc-event-border-color: #f2849e;
+        }

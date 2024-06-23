@@ -7,6 +7,21 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//jack - begin
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(
+        "CorsPolicy",
+        builder => builder
+            .WithOrigins("http://localhost:5299")        //Use the port your webapp is running on!
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials()
+    );
+});
+//jack - end
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -16,7 +31,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
+
+app.UseCors("CorsPolicy"); //Added by Jack               <-- This is the line we are adding
 
 app.UseAuthorization();
 

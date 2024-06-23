@@ -11,6 +11,10 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="index.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/superagent/superagent.min.js"></script>
+
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
@@ -43,6 +47,27 @@
 
 			<script>
 
+				// Function to fetch events from a URL
+				async function fetchEvents() {
+					try {
+						const response = await fetch('http://localhost:5117/Schedule');
+						if (!response.ok) {
+							throw new Error('Network response was not ok');
+						}
+						const events = await response.json();
+						console.log(events)
+						return events.scheduleResponse.therapyEvents.map(event => ({
+							title: event.title,
+							start: event.start,
+							end: event.endDate
+						}));
+					} catch (error) {
+						console.error('Error fetching events:', error);
+						return [];
+					}
+				}
+
+
 
 				document.addEventListener('DOMContentLoaded', function () {
 					var calendarEl = document.getElementById('calendar');
@@ -53,7 +78,7 @@
 							center: 'title',
 							right: 'dayGridMonth,timeGridWeek,timeGridDay'
 						},
-						initialDate: '2023-01-12',
+						initialDate: '2024-06-12',
 						navLinks: true, // can click day/week names to navigate views
 						selectable: true,
 						selectMirror: true,
@@ -69,69 +94,22 @@
 							}
 							calendar.unselect()
 						},
-						eventClick: function (arg) {
-							if (confirm('Are you sure you want to delete this event?')) {
-								arg.event.remove()
-							}
-						},
+						// eventClick: function (arg) {
+						// 	if (confirm('Are you sure you want to delete this event?')) {
+						// 		arg.event.remove()
+						// 	}
+						// },
 						editable: true,
 						dayMaxEvents: true, // allow "more" link when too many events
-						events: [
-							{
-								title: 'All Day Event',
-								start: '2023-01-01'
-							},
-							{
-								title: 'Long Event',
-								start: '2023-01-07',
-								end: '2023-01-10'
-							},
-							{
-								groupId: 999,
-								title: 'Repeating Event',
-								start: '2023-01-09T16:00:00'
-							},
-							{
-								groupId: 999,
-								title: 'Repeating Event',
-								start: '2023-01-16T16:00:00'
-							},
-							{
-								title: 'Conference',
-								start: '2023-01-11',
-								end: '2023-01-13'
-							},
-							{
-								title: 'Meeting',
-								start: '2023-01-12T10:30:00',
-								end: '2023-01-12T12:30:00'
-							},
-							{
-								title: 'Lunch',
-								start: '2023-01-12T12:00:00'
-							},
-							{
-								title: 'Meeting',
-								start: '2023-01-12T14:30:00'
-							},
-							{
-								title: 'Happy Hour',
-								start: '2023-01-12T17:30:00'
-							},
-							{
-								title: 'Dinner',
-								start: '2023-01-12T20:00:00'
-							},
-							{
-								title: 'Birthday Party',
-								start: '2023-01-13T07:00:00'
-							},
-							{
-								title: 'Click for Google',
-								url: 'http://google.com/',
-								start: '2023-01-28'
+						events: async function (info, successCallback, failureCallback) {
+							try {
+								const events = await fetchEvents();
+								successCallback(events);
+							} catch (error) {
+								failureCallback(error);
 							}
-						]
+						}
+
 					});
 
 					calendar.render();
@@ -192,8 +170,8 @@
 					</ul>
 				</section>
 				<ul class="copyright">
-					<li>&copy; Untitled. All rights reserved</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>&copy; 2024 Murdock Therapy. All rights reserved</li>
+					<li>Design: <a href="https://github.com/SkylarKincaid">Kincaid</a></li>
 				</ul>
 			</div>
 		</footer>
