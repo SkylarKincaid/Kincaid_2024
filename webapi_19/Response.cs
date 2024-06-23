@@ -10,5 +10,11 @@ namespace webapi_02
         public Result Result { get; set; } = Result.error;
         public string Message { get; set; } = "";
         public ScheduleResponse ScheduleResponse { get; set; } = new ScheduleResponse();
+
+        public override string ToString()
+        {
+            return $"Response: {{ Result: {Result}, Message: \"{Message}\", ScheduleResponse: {ScheduleResponse} }}";
+        }
+
     }
 }

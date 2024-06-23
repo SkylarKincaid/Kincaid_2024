@@ -13,7 +13,8 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet" href="index.css" />
 
-	<script src="https://cdn.jsdelivr.net/npm/superagent/superagent.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
 
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
@@ -42,10 +43,55 @@
 				</nav>
 
 			</div>
-			<!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script> -->
-			<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
+
 
 			<script>
+
+				function showCustomPrompt(type, message, callback, deleteCallback) {
+					// Display the custom prompt
+					const customPrompt = document.getElementById('customPrompt');
+					const promptText = document.querySelector('.prompt-text');
+					const promptInput = document.getElementById('promptInput');
+					const okButton = document.getElementById('okButton');
+					const cancelButton = document.getElementById('closeButton');
+					const deleteButton = document.getElementById('deleteButton');
+
+					promptText.textContent = message;
+					if (type == 'create') {
+						deleteButton.style.display = 'none';
+					}
+
+
+					customPrompt.style.display = 'flex';
+					$('body').css('overflow-y', 'hidden')
+
+
+					// Handle OK button click
+					okButton.onclick = function () {
+						const userInput = promptInput.value;
+						callback(userInput);
+						closeCustomPrompt();
+					};
+
+					// Handle Cancel button click
+					closeButton.onclick = function () {
+						callback(null);
+						closeCustomPrompt();
+					};
+
+					deleteButton.onclick = function () {
+						deleteCallback();
+						closeCustomPrompt();
+					};
+
+					// Close the custom prompt
+					function closeCustomPrompt() {
+						customPrompt.style.display = 'none';
+						deleteButton.style.display = '';
+						$('body').css('overflow-y', 'scroll')
+						promptInput.value = ''; // Clear the input field
+					}
+				}
 
 				// Function to fetch events from a URL
 				async function fetchEvents() {
@@ -55,19 +101,32 @@
 							throw new Error('Network response was not ok');
 						}
 						const events = await response.json();
-						console.log(events)
-						return events.scheduleResponse.therapyEvents.map(event => ({
-							title: event.title,
-							start: event.start,
-							end: event.endDate
-						}));
+
+						return events.scheduleResponse.therapyEvents.map(event => {
+							let getDate = (date) => {
+								if (moment(date).hour() == 0) {
+									return (moment(date).format('YYYY-MM-DD'));
+								}
+								else {
+									return date;
+								}
+							}
+
+							return (
+								{
+									title: event.title,
+									start: getDate(event.start),
+									end: getDate(event.endDate),
+									id: event.id
+								}
+							)
+
+						});
 					} catch (error) {
 						console.error('Error fetching events:', error);
 						return [];
 					}
 				}
-
-
 
 				document.addEventListener('DOMContentLoaded', function () {
 					var calendarEl = document.getElementById('calendar');
@@ -83,22 +142,68 @@
 						selectable: true,
 						selectMirror: true,
 						select: function (arg) {
-							var title = prompt('Event Title:');
-							if (title) {
-								calendar.addEvent({
-									title: title,
-									start: arg.start,
-									end: arg.end,
-									allDay: arg.allDay
-								})
-							}
+							showCustomPrompt('create', 'Create Event with Title:', function (response) {
+								if (response) {
+
+									let InsertEvent = async function (title, start, endDate) {
+										try {
+											const response = await fetch(`http://localhost:5117/InsertSchedule?title=${title}&start=${moment(start).format('YYYY-MM-DD HH:mm:ss')}&endDate=${moment(endDate).format('YYYY-MM-DD HH:mm:ss')}`);
+											if (!response.ok) {
+												throw new Error('Network response was not ok');
+											}
+											const events = await response.json();
+											calendar.refetchEvents();
+
+										} catch (error) {
+											console.error('Error fetching events:', error);
+										}
+									}
+
+									InsertEvent(response, arg.start, arg.end)
+								}
+							});
 							calendar.unselect()
+
 						},
-						// eventClick: function (arg) {
-						// 	if (confirm('Are you sure you want to delete this event?')) {
-						// 		arg.event.remove()
-						// 	}
-						// },
+						eventClick: function (arg) {
+							showCustomPrompt('update', 'Update Event Title:', function (response) {
+								if (response) {
+									let UpdateEvent = async function (title, iD) {
+										try {
+											const response = await fetch(`http://localhost:5117/UpdateSchedule?title=${title}&id=${iD}`);
+											if (!response.ok) {
+												throw new Error('Network response was not ok');
+											}
+											const events = await response.json();
+											calendar.refetchEvents()
+
+										} catch (error) {
+											console.error('Error fetching events:', error);
+											return [];
+										}
+									}
+									UpdateEvent(response, arg.event.id)
+
+								}
+							}, function () {
+								let DeleteEvent = async function (iD) {
+									try {
+										const response = await fetch(`http://localhost:5117/DeleteSchedule?id=${iD}`);
+										if (!response.ok) {
+											throw new Error('Network response was not ok');
+										}
+										const events = await response.json();
+										calendar.refetchEvents()
+
+									} catch (error) {
+										console.error('Error fetching events:', error);
+										return [];
+									}
+								}
+								DeleteEvent(arg.event.id)
+
+							});
+						},
 						editable: true,
 						dayMaxEvents: true, // allow "more" link when too many events
 						events: async function (info, successCallback, failureCallback) {
@@ -136,6 +241,17 @@
 				<h1>Schedule Page</h1>
 				<div id='calendar'></div>
 			</div>
+			<div id="customPrompt" class="custom-prompt">
+				<div class="prompt-content">
+					<button id="closeButton">X</button>
+					<span class="prompt-text">Please enter your name:</span>
+					<input type="text" id="promptInput" class="prompt-input">
+					<div class="prompt-buttons">
+						<button id="okButton">OK</button>
+						<button id="deleteButton">Delete</button>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- Footer -->
@@ -166,7 +282,8 @@
 						<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a>
 						</li>
 						<li><a href="#" class="icon solid style2 fa-phone"><span class="label">Phone</span></a></li>
-						<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+						</li>
 					</ul>
 				</section>
 				<ul class="copyright">

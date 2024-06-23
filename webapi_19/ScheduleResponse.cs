@@ -8,5 +8,11 @@ namespace webapi_02
     {
         public List<Schedule> TherapyEvents { get; set; } = new List<Schedule>();
 
+        public override string ToString()
+        {
+            return $"Response: {{ TherapyEvents: {TherapyEvents} }}";
+        }
+
+
     }
 }

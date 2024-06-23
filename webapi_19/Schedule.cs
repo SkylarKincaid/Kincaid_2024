@@ -93,69 +93,71 @@ namespace webapi_02
 
 
 
-        // public static int InsertEmployee(SqlConnection sqlConnection, string firstName, string lastName, decimal salary)
-        // {
-        //     int rowsUpdated = 0;
+        public static int InsertSchedule(SqlConnection sqlConnection, string title, DateTime start, DateTime endDate)
+        {
+            // created a variable of rowsUpdated with type int and value 0
+            int rowsUpdated = 0;
 
-        //     // Set the SQL statement
-        //     string sqlStatement = "insert into Employee (FirstName, LastName, Salary) values (@FirstName, @LastName, @Salary)";
+            // Set the SQL statement
+            string sqlStatement = "insert into Schedule (TITLE, START, END_DATE) values (@TITLE, @START, @END_DATE)";
 
-        //     // Create a SqlCommand
-        //     using (SqlCommand sqlCommand = new SqlCommand(sqlStatement, sqlConnection))
-        //     {
-        //         // Add parameters
-        //         sqlCommand.Parameters.AddWithValue("@FirstName", firstName);
-        //         sqlCommand.Parameters.AddWithValue("@LastName", lastName);
-        //         sqlCommand.Parameters.AddWithValue("@Salary", salary);
+            // Create a SqlCommand
+            using (SqlCommand sqlCommand = new SqlCommand(sqlStatement, sqlConnection))
+            {
+                // Add parameters
+                sqlCommand.Parameters.AddWithValue("@TITLE", title);
+                sqlCommand.Parameters.AddWithValue("@START", start);
+                sqlCommand.Parameters.AddWithValue("@END_DATE", endDate);
 
-        //         // Execute the SQL command (and capture number of rows updated)
-        //         rowsUpdated = sqlCommand.ExecuteNonQuery();
-        //     }
+                // Execute the SQL command (and capture number of rows updated)
+                rowsUpdated = sqlCommand.ExecuteNonQuery();
+            }
 
-        //     return rowsUpdated;
-        // }
+            return rowsUpdated;
+        }
 
-        //     public static int UpdateEmployee(SqlConnection sqlConnection, int employeeId, string firstName, string lastName, decimal salary)
-        //     {
-        //         int rowsUpdated = 0;
+        public static int UpdateSchedule(SqlConnection sqlConnection, string title, int ID)
+        {
+            //creates a value for rowsUpdated
+            int rowsUpdated = 0;
 
-        //         // Set the SQL statement
-        //         string sqlStatement = "update Employee set FirstName = @FirstName, LastName = @LastName, Salary = @Salary where EmployeeId = @EmployeeId";
+            // Creates a string statment for Update Schedule with placeholders
+            string sqlStatement = "update Schedule set TITLE = @title Where ID = @ID";
 
-        //         // Create a SqlCommand
-        //         using (SqlCommand sqlCommand = new SqlCommand(sqlStatement, sqlConnection))
-        //         {
-        //             // Add parameters
-        //             sqlCommand.Parameters.AddWithValue("@FirstName", firstName);
-        //             sqlCommand.Parameters.AddWithValue("@LastName", lastName);
-        //             sqlCommand.Parameters.AddWithValue("@Salary", salary);
-        //             sqlCommand.Parameters.AddWithValue("@EmployeeId", employeeId);
+            // Says we use some sql stuff to create stuff
+            using (SqlCommand sqlCommand = new SqlCommand(sqlStatement, sqlConnection))
+            {
+                // Adds paramaters that assigns values to the placeholders
+                sqlCommand.Parameters.AddWithValue("@title", title);
+                sqlCommand.Parameters.AddWithValue("@ID", ID);
+                // Execute the SQL command 
+                rowsUpdated = sqlCommand.ExecuteNonQuery();
+            }
+            // Returns number of rows updated
+            return rowsUpdated;
+        }
 
-        //             // Execute the SQL command (and capture number of rows updated)
-        //             rowsUpdated = sqlCommand.ExecuteNonQuery();
-        //         }
+        //    Public means it can be accessed by the entire site. Then, we created a function of DeleteSchedule that returns on object of type int. 
+        public static int DeleteSchedule(SqlConnection sqlConnection, int ID)
+        {
+            // Here we created a variable named rowsDeleted with type int and value 0. 
+            int rowsDeleted = 0;
 
-        //         return rowsUpdated;
-        //     }
+            // Here we create the variable sqlStatement with type string and the value. 
+            string sqlStatement = "delete from Schedule where ID = @ID";
 
-        //     public static int DeleteEmployee(SqlConnection sqlConnection, int employeeId)
-        //     {
-        //         int rowsDeleted = 0;
+            // Here we told the database to connect and do some stuff
+            using (SqlCommand sqlCommand = new SqlCommand(sqlStatement, sqlConnection))
+            {
+                // Here we added the ID parameter
+                sqlCommand.Parameters.AddWithValue("@ID", ID);
 
-        //         // Set the SQL statement
-        //         string sqlStatement = "delete from Employee where EmployeeId = @EmployeeId";
-
-        //         using (SqlCommand sqlCommand = new SqlCommand(sqlStatement, sqlConnection))
-        //         {
-        //             // Add parameters
-        //             sqlCommand.Parameters.AddWithValue("@EmployeeId", employeeId);
-
-        //             // Execute the SQL command (and capture number of rows deleted)
-        //             rowsDeleted = sqlCommand.ExecuteNonQuery();
-        //         }
-
-        //         return rowsDeleted;
-        //     }
+                // Here we executed the query to return the variable value
+                rowsDeleted = sqlCommand.ExecuteNonQuery();
+            }
+            // Here we will return the variable value. 
+            return rowsDeleted;
+        }
 
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 
@@ -36,7 +37,6 @@ namespace webapi_02.Controllers
                     sqlConnection.Open();
 
 
-                    //Select employees
                     response.ScheduleResponse = Schedule.GetSchedule(sqlConnection);
                     response.Message = $"{response.ScheduleResponse.TherapyEvents.Count} events returned.";
 
@@ -52,100 +52,106 @@ namespace webapi_02.Controllers
             return response;
         }
 
-        // [HttpGet]
-        // [Route("/InsertEmployee")]
-        // public Response InsertEmployee(string firstName, string lastName, decimal salary, string search = "", int pageSize = 10, int pageNumber = 1, string sort = "EmployeId")
-        // {
-        //     Response response = new Response();
+        [HttpGet]
+        [Route("/InsertSchedule")]
+        public Response InsertSchedule(string title, string start, string endDate)
+        {
+            Response response = new Response();
 
-        //     try
-        //     {
-        //         using (SqlConnection sqlConnection = new SqlConnection(connectionString))
-        //         {
-        //             sqlConnection.Open();
+            try
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+                {
+                    sqlConnection.Open();
 
-        //             //Insert employee
-        //             int rowsInserted = Employee.InsertEmployee(sqlConnection, firstName, lastName, salary);
-        //             response.Message = "${rowsInserted} employees inserted. ";
+                    //Insert employee
+                    int rowsInserted = Schedule.InsertSchedule(sqlConnection, title, DateTime.Parse(start), DateTime.Parse(endDate));
+                    response.Message = $"{rowsInserted} schedule inserted. ";
 
-        //             //Select employees after insert
-        //             response.EmployeeResponse = Employee.SearchEmployees(sqlConnection, search, pageSize, pageNumber, sort);
-        //             response.Message = $"{response.EmployeeResponse.Employees.Count} employees selected.";
+                    response.Result = Result.success;
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Message = $"An error occurred in InsertSchedule: {ex.Message}";
+                response.Result = Result.error;
+            }
 
-        //             response.Result = Result.success;
-        //         }
-        //     }
-        //     catch (Exception ex)
-        //     {
-        //         response.Message = $"An error occurred in InsertEmployee: {ex.Message}";
-        //         response.Result = Result.error;
-        //     }
+            return response;
+        }
 
-        //     return response;
-        // }
+        [HttpGet]
+        [Route("/UpdateSchedule")]
+        // Public means the entire site can access it. The function returns a response with the name Updated Schedule. Title and ID are the paramaters. 
+        public Response UpdateSchedule(string title, int ID)
+        {
+            // Creating a variable of response with type Response and value of new Response - or an empty response object
+            Response response = new Response();
 
-        // [HttpGet]
-        // [Route("/UpdateEmployee")]
-        // public Response UpdateEmployee(int employeeId, string firstName, string lastName, decimal salary, string search = "", int pageSize = 10, int pageNumber = 1, string sort = "EmployeId")
-        // {
-        //     Response response = new Response();
+            Console.WriteLine(response);
 
-        //     try
-        //     {
-        //         using (SqlConnection sqlConnection = new SqlConnection(connectionString))
-        //         {
-        //             sqlConnection.Open();
+            try
+            {
+                // creating connection
+                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+                {
+                    sqlConnection.Open();
 
-        //             //Update employee
-        //             int rowsUpdated = Employee.UpdateEmployee(sqlConnection, employeeId, firstName, lastName, salary);
-        //             response.Message = "${rowsUpdated} employees updated. ";
+                    //This is a variable named rowsUpdated of type int. Its value is what is returned from the UpdateSchedule funciton in the Schedule class. 
+                    int rowsUpdated = Schedule.UpdateSchedule(sqlConnection, title, ID);
 
-        //             //Select employees after update
-        //             response.EmployeeResponse = Employee.SearchEmployees(sqlConnection, search, pageSize, pageNumber, sort);
-        //             response.Message = $"{response.EmployeeResponse.Employees.Count} employees selected.";
+                    // This sets the message parameter of the response varaiable to the string. 
+                    response.Message = $"{rowsUpdated} schedule updated. ";
 
-        //             response.Result = Result.success;
-        //         }
-        //     }
-        //     catch (Exception ex)
-        //     {
-        //         response.Message = $"An error occurred in UpdateEmployee: {ex.Message}";
-        //         response.Result = Result.error;
-        //     }
 
-        //     return response;
-        // }
+                    Console.WriteLine(response);
 
-        // [HttpGet]
-        // [Route("/DeleteEmployee")]
-        // public Response DeleteEmployee(int employeeId, string search = "", int pageSize = 10, int pageNumber = 1, string sort = "EmployeId")
-        // {
-        //     Response response = new Response();
+                    // This sets the result parameter of the response variable to the enum. 
+                    response.Result = Result.success;
+                    Console.WriteLine(response);
+                }
+            }
+            // catches errors
+            catch (Exception ex)
+            {
+                response.Message = $"An error occurred in UpdateSchedule: {ex.Message}";
+                response.Result = Result.error;
+            }
+            //  returns variable response
+            return response;
+        }
 
-        //     try
-        //     {
-        //         using (SqlConnection sqlConnection = new SqlConnection(connectionString))
-        //         {
-        //             sqlConnection.Open();
+        [HttpGet]
+        [Route("/DeleteSchedule")]
+        // Public means the entire site can access this. Here the function returns response and is named Delete Schedule. ID is a parameter.
+        public Response DeleteSchedule(int ID)
+        {
+            // We crated a variable response with type Response and value new Response. 
+            Response response = new Response();
 
-        //             //Delete employees
-        //             int rowsDeleted = Employee.DeleteEmployee(sqlConnection, employeeId);
-        //             response.Message = "${rowsDeleted} employees deleted. ";
+            try
+            {
+                // Here we connect to the database and do stuff
+                using (SqlConnection sqlConnection = new SqlConnection(connectionString))
+                {
+                    sqlConnection.Open();
 
-        //             //Select employees after delete
-        //             response.EmployeeResponse = Employee.SearchEmployees(sqlConnection, search, pageSize, pageNumber, sort);
-        //             response.Message = $"{response.EmployeeResponse.Employees.Count} employees selected.";
-
-        //             response.Result = Result.success;
-        //         }
-        //     }
-        //     catch (Exception ex)
-        //     {
-        //         response.Message = $"An error occurred in DeleteEmployee: {ex.Message}";
-        //         response.Result = Result.error;
-        //     }
-
-        //     return response;
-        // }
+                    //Here we create variable rowsDeleted with type int and set a value for what class schedule and function DeleteSchedule returns. 
+                    int rowsDeleted = Schedule.DeleteSchedule(sqlConnection, ID);
+                    // This sets the message parameter of the response to the string. 
+                    response.Message = "${rowsDeleted} employees deleted. ";
+                    // This sets the result parameter of the response variable to the enum.
+                    response.Result = Result.success;
+                }
+            }
+            // This catches errors
+            catch (Exception ex)
+            {
+                response.Message = $"An error occurred in DeleteSchedule: {ex.Message}";
+                response.Result = Result.error;
+            }
+            // This returns the response variable
+            return response;
+        }
     }
 }
